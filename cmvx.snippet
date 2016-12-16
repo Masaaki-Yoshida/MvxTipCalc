@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>MvvmCross command</Title>
+			<Shortcut>cmvx</Shortcut>
+			<Description>Code snippet for MvvmCross command</Description>
+
+        </Header>
+  		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>myCommand</ID>
+					<ToolTip>Private command name</ToolTip>
+					<Default>myCommand</Default>
+				</Literal>
+				<Literal>
+					<ID>MyCommand</ID>
+					<ToolTip>Public command name</ToolTip>
+					<Default>MyCommand</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+MvxCommand _$myCommand$;
+public System.Windows.Input.ICommand $MyCommand$ {
+	get {
+		_$myCommand$ = _$myCommand$ ?? new MvxCommand(Do$MyCommand$);
+		return _$myCommand$;
+	}
+}
+
+private void Do$MyCommand$ ()
+{
+	$end$
+}
+]]>
+			</Code>
+		</Snippet>
+    </CodeSnippet>
+</CodeSnippets>

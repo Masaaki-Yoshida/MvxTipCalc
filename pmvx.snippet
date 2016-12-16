@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets
+    xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>MvvmCross property</Title>
+			<Shortcut>pmvx</Shortcut>
+			<Description>Code snippet for MvvmCross proprty</Description>
+
+        </Header>
+  		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Type of the property</ToolTip>
+					<Default>string</Default>
+				</Literal>
+				<Literal>
+					<ID>privateName</ID>
+					<ToolTip>Private name</ToolTip>
+					<Default>privateProperty</Default>
+				</Literal>
+				<Literal>
+					<ID>publicName</ID>
+					<ToolTip>Public name</ToolTip>
+					<Default>PublicProprty</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[
+private $type$ _$privateName$;
+public $type$ $publicName$ {
+	get { return _$privateName$; }
+	set { _$privateName$ = value; RaisePropertyChanged ("$publicName$"); }
+}
+$end$
+]]>
+			</Code>
+		</Snippet>
+    </CodeSnippet>
+</CodeSnippets>
